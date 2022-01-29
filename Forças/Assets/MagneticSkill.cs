@@ -12,7 +12,6 @@ public class MagneticSkill : MonoBehaviour
     [HideInInspector]public Vector2 forceDirection;
 
     private Polarity playerPolarity;
-    private bool mousePressed;
     // Start is called before the first frame update
     void Start()
     {
@@ -32,30 +31,23 @@ public class MagneticSkill : MonoBehaviour
 
         if (Input.GetMouseButton(0) || Input.GetMouseButton(1))
         {
-            mousePressed = true;
-            Vector2 destinationDirection = transform.position - player.transform.position;
-            Ray2D ray = new Ray2D(player.transform.position, destinationDirection);
-            RaycastHit2D hit = Physics2D.Raycast(player.transform.position, destinationDirection, 200f, magnetsLayer);
-            Debug.DrawRay(player.transform.position, destinationDirection);
+            RaycastHit2D hit = Physics2D.Raycast(player.transform.position, transform.position - player.transform.position, 20f, magnetsLayer);
+            Debug.DrawRay(player.transform.position, transform.position - player.transform.position);
             if (hit)
             {
+                Vector2 destinationDirection = hit.point - new Vector2(player.transform.position.x, player.transform.position.y);
                 Polarity magnetPolarity = hit.rigidbody.gameObject.GetComponent<Magnet>().polarity;
-                Debug.Log("encontrou");
                 if (magnetPolarity == playerPolarity)
                 {
-                    //PushPlayer(destinationDirection);
                     forceDirection = -destinationDirection.normalized;
                     Debug.Log("afasta");
                 }
-
                 else
                 {
-                    //PullPlayer(destinationDirection);
                     forceDirection = destinationDirection.normalized;
                     Debug.Log("atrai");
                 }
                 forceDirection = new Vector2(forceDirection.x * xForce, forceDirection.y).normalized;
-
             }
             else
                 forceDirection = Vector2.zero;
@@ -65,20 +57,4 @@ public class MagneticSkill : MonoBehaviour
 
     }
 
-
-    public void PushPlayer(Vector2 direction)
-    {
-        Vector2 force = -direction.normalized;
-        player.transform.position += new Vector3(force.x, force.y, 0f) * strengh;
-        //player.GetComponent<Rigidbody2D>().AddForce(force * forceStrengh);
-    }
-
-    public void PullPlayer(Vector2 direction)
-    {
-        //player.GetComponent<Rigidbody2D>().AddForce(force * forceStrengh, ForceMode2D.Force);
-        //player.transform.position += new Vector3(force.x, force.y, 0f)*strengh;
-        player.GetComponent<Rigidbody2D>().velocity = player.GetComponent<Rigidbody2D>().velocity + direction.normalized * strengh;
-
-        //player.GetComponent<Rigidbody2D>().AddForce(force * forceStrengh);
-    }
 }
