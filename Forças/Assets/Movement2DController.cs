@@ -6,6 +6,7 @@ public class Movement2DController : MonoBehaviour
 {
     public float speed;
     public float jumpForce;
+    public MagneticSkill mouse;
 
     Rigidbody2D rb;
     float moveX;
@@ -35,7 +36,10 @@ public class Movement2DController : MonoBehaviour
     private void FixedUpdate()
     {
         Vector2 moveVelocity = new Vector2(moveX * speed, rb.velocity.y);
-        rb.velocity = moveVelocity;
+        //print("moveVelocity "+moveVelocity);
+        //print("forceDirection "+mouse.forceDirection*mouse.strengh);
+        rb.velocity = (moveVelocity + mouse.strengh*mouse.forceDirection);
+        print("soma " + (moveVelocity + mouse.strengh * mouse.forceDirection));
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
