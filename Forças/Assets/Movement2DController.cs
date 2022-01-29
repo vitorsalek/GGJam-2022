@@ -9,6 +9,7 @@ public class Movement2DController : MonoBehaviour
 
     Rigidbody2D rb;
     float moveX;
+    bool canJump=true;
 
     // Start is called before the first frame update
     void Start()
@@ -21,15 +22,25 @@ public class Movement2DController : MonoBehaviour
     {
         moveX = Input.GetAxisRaw("Horizontal");
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && canJump)
+        {
+            canJump = false;
             rb.AddForce(Vector3.up * jumpForce, ForceMode2D.Impulse);
+        }
+
+        RaycastHit hit;
+        // Does the ray intersect any objects excluding the player layer
     }
 
     private void FixedUpdate()
     {
         Vector2 moveVelocity = new Vector2(moveX * speed, rb.velocity.y);
         rb.velocity = moveVelocity;
-        //rb.velocity = new Vector2(Mathf.Clamp(rb.velocity.x, -speed, speed), rb.velocity.y);
-        //rb.MovePosition(rb.position + moveVelocity * Time.fixedDeltaTime);
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("ground"))
+            canJump = true;
     }
 }
