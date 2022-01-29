@@ -4,23 +4,54 @@ using UnityEngine;
 
 public class PlayerAnimation : MonoBehaviour
 {
-    [SerializeField] private SpriteRenderer playerBody;
-    [SerializeField] private SpriteRenderer playerHead;
+    [SerializeField] private GameObject playerBody;
+    [SerializeField] private GameObject playerHead;
+
+    private SpriteRenderer bodySprite;
+    private SpriteRenderer headSprite;
+
+
+    [Header("Death Animation")]
+    [SerializeField] private GameObject headPrefab;
+    [SerializeField] private float deathPump = 5f;
+    [SerializeField] private float torqueSpeed = 4f;
+
 
     void Start()
     {
-        
+
+        bodySprite = playerBody.GetComponent<SpriteRenderer>();
+        headSprite = playerHead.GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        FlipSprites();
+
+        if (Input.GetKeyDown(KeyCode.P))
+            DeathAnimation();
+    }
+
+    void FlipSprites()
+    {
         Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
         Vector3 aimDir = (mousePos - transform.position).normalized;
 
-        playerHead.flipX = aimDir.x < 0;
-        playerBody.flipX = Input.GetAxisRaw("Horizontal") < 0;
+        headSprite.flipX = aimDir.x < 0;
+        bodySprite.flipX = Input.GetAxisRaw("Horizontal") < 0;
+    }
+
+    void DeathAnimation()
+    {
+        GameObject headObj = Instantiate(headPrefab, playerHead.transform.position, Quaternion.identity);
+        Rigidbody2D headRb = headObj.GetComponent<Rigidbody2D>();
+
+        headRb.velocity = Vector2.up * deathPump;
+        headRb.AddTorque(torqueSpeed, ForceMode2D.Force);
+
+        playerHead.SetActive(false);
     }
 
     public void DoSqueeze(float _xSqueeze, float _ySqueeze, float _seconds)
