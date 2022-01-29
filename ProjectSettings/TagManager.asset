@@ -9,6 +9,8 @@ TagManager:
   - BackgrounddSlider
   - EffectsSlider
   - Damage
+  - checkpoint
+  - persistentData
   layers:
   - Default
   - TransparentFX
