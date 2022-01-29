@@ -23,10 +23,10 @@ public class Movement2DController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (isGrounded && !persistent.fadeOn)
+        if (!persistent.fadeOn)
         {
             moveX = Input.GetAxisRaw("Horizontal");
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
                 rb.AddForce(Vector3.up * jumpForce, ForceMode2D.Impulse);
         }
     }
