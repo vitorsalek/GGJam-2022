@@ -9,6 +9,7 @@ TagManager:
   - BackgrounddSlider
   - EffectsSlider
   - Damage
+  - checkpoint
   layers:
   - Default
   - TransparentFX
