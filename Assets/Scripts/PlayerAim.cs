@@ -24,10 +24,17 @@ public class PlayerAim : MonoBehaviour
         mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
         Vector3 aimDir = (mousePos - transform.position).normalized;
-        float angle = Mathf.Atan2(aimDir.y, aimDir.x) * Mathf.Rad2Deg;
+        float angle;
+
+        playerSprite.flipX = aimDir.x < 0;
+        aimTransform.GetChild(0).gameObject.GetComponent<SpriteRenderer>().flipX = aimDir.x < 0;
+
+        if (aimDir.x < 0)
+            angle = Mathf.Atan2(aimDir.y, aimDir.x) * Mathf.Rad2Deg + 90;
+        else
+            angle = Mathf.Atan2(aimDir.y, aimDir.x) * Mathf.Rad2Deg;
 
         aimTransform.eulerAngles = new Vector3(0, 0, angle);
 
-        playerSprite.flipX = aimDir.x < 0;
     }
 }
