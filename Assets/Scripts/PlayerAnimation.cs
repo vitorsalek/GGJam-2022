@@ -13,6 +13,7 @@ public class PlayerAnimation : MonoBehaviour
 
     [Header("Death Animation")]
     [SerializeField] private GameObject headPrefab;
+    [SerializeField] private GameObject bodyPrefab;
     [SerializeField] private float deathPump = 5f;
     [SerializeField] private float torqueSpeed = 4f;
 
@@ -52,6 +53,11 @@ public class PlayerAnimation : MonoBehaviour
         headRb.AddTorque(torqueSpeed, ForceMode2D.Force);
 
         playerHead.SetActive(false);
+
+        GameObject bodyObj = Instantiate(bodyPrefab, playerBody.transform.position, Quaternion.identity);
+        bodyObj.GetComponent<Animator>().Play("DeathAnimation");
+
+        gameObject.SetActive(false);
     }
 
     public void DoSqueeze(float _xSqueeze, float _ySqueeze, float _seconds)
