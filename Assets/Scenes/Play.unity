@@ -386,7 +386,7 @@ MonoBehaviour:
   player: {fileID: 933499041}
   strengh: 3
   xForce: 8
-  yForce: 0.5
+  yForce: 0.7
   maxMagnetDistance: 10
   magnetsLayer:
     serializedVersion: 2
@@ -530,7 +530,7 @@ MonoBehaviour:
   m_ShowCameraFrustum: 1
   m_IgnoreTimeScale: 0
   m_WorldUpOverride: {fileID: 0}
-  m_UpdateMethod: 2
+  m_UpdateMethod: 0
   m_BlendUpdateMethod: 1
   m_DefaultBlend:
     m_Style: 1
@@ -1626,9 +1626,9 @@ MonoBehaviour:
   m_TrackedObjectOffset: {x: 0, y: 1, z: 0}
   m_LookaheadTime: 0.3
   m_LookaheadSmoothing: 10
-  m_LookaheadIgnoreY: 1
-  m_XDamping: 0.7
-  m_YDamping: 0.7
+  m_LookaheadIgnoreY: 0
+  m_XDamping: 0.6
+  m_YDamping: 0.6
   m_ZDamping: 0
   m_TargetMovementOnly: 1
   m_ScreenX: 0.5
@@ -1638,8 +1638,8 @@ MonoBehaviour:
   m_DeadZoneHeight: 0.1
   m_DeadZoneDepth: 0
   m_UnlimitedSoftZone: 0
-  m_SoftZoneWidth: 0.8
-  m_SoftZoneHeight: 0.8
+  m_SoftZoneWidth: 0.7
+  m_SoftZoneHeight: 0.6
   m_BiasX: 0
   m_BiasY: 0
   m_CenterOnActivate: 1
