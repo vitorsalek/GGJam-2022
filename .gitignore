@@ -36,3 +36,4 @@ sysinfo.txt
 *.apk
 *.unitypackage
 Forças/Logs/shadercompiler-UnityShaderCompiler.exe0.log
+*.log
