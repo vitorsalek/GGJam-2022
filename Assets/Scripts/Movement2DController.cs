@@ -11,17 +11,19 @@ public class Movement2DController : MonoBehaviour
     Rigidbody2D rb;
     float moveX;
     bool isGrounded=true;
+    Persistent persistent;
 
     // Start is called before the first frame update
     void Start()
     {
+        persistent = Persistent.current;
         rb = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (isGrounded)
+        if (isGrounded && !persistent.fadeOn)
         {
             moveX = Input.GetAxisRaw("Horizontal");
             if (Input.GetKeyDown(KeyCode.Space))
@@ -31,14 +33,17 @@ public class Movement2DController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Vector2 moveVelocity = new Vector2(moveX * speed, rb.velocity.y);
-        Vector2 magnetVelocity = (mouse.strengh * mouse.forceDirection);
+        if (!persistent.fadeOn)
+        {
+            Vector2 moveVelocity = new Vector2(moveX * speed, rb.velocity.y);
+            Vector2 magnetVelocity = (mouse.strengh * mouse.forceDirection);
 
-        //print("magnet antes: " + magnetVelocity);
-        magnetVelocity = new Vector2(magnetVelocity.x, Mathf.Clamp(magnetVelocity.y, -0.8f, 0.8f));
-        //print("magnet depois: " + magnetVelocity);
+            //print("magnet antes: " + magnetVelocity);
+            magnetVelocity = new Vector2(magnetVelocity.x, Mathf.Clamp(magnetVelocity.y, -0.8f, 0.8f));
+            //print("magnet depois: " + magnetVelocity);
 
-        rb.velocity = (moveVelocity + magnetVelocity);
+            rb.velocity = (moveVelocity + magnetVelocity);
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
