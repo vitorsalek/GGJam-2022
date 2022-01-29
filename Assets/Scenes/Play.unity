@@ -495,7 +495,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 131531809}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.1230884, y: -1.2132323, z: -10}
+  m_LocalPosition: {x: 1.1230881, y: -1.2132323, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -515,7 +515,7 @@ GameObject:
   - component: {fileID: 257569688}
   - component: {fileID: 257569687}
   m_Layer: 6
-  m_Name: Ground (3)
+  m_Name: Magnet
   m_TagString: ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -660,7 +660,7 @@ GameObject:
   - component: {fileID: 278057074}
   - component: {fileID: 278057073}
   m_Layer: 6
-  m_Name: Ground (2)
+  m_Name: Magnet
   m_TagString: ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -805,7 +805,7 @@ GameObject:
   - component: {fileID: 333243325}
   - component: {fileID: 333243324}
   m_Layer: 6
-  m_Name: Ground (1)
+  m_Name: Magnet
   m_TagString: ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1104,7 +1104,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 923744888}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.1230884, y: -1.2132323, z: -10}
+  m_LocalPosition: {x: 1.1230881, y: -1.2132323, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1524911683}
