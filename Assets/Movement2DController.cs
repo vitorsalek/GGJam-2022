@@ -10,7 +10,7 @@ public class Movement2DController : MonoBehaviour
 
     Rigidbody2D rb;
     float moveX;
-    bool canJump=true;
+    bool isGrounded=true;
 
     // Start is called before the first frame update
     void Start()
@@ -23,14 +23,10 @@ public class Movement2DController : MonoBehaviour
     {
         moveX = Input.GetAxisRaw("Horizontal");
 
-        if (Input.GetKeyDown(KeyCode.Space) && canJump)
+        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
-            canJump = false;
             rb.AddForce(Vector3.up * jumpForce, ForceMode2D.Impulse);
         }
-
-        RaycastHit hit;
-        // Does the ray intersect any objects excluding the player layer
     }
 
     private void FixedUpdate()
@@ -45,6 +41,12 @@ public class Movement2DController : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("ground"))
-            canJump = true;
+            isGrounded = true;
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("ground"))
+            isGrounded = false;
     }
 }
