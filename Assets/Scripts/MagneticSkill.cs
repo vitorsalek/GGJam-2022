@@ -49,7 +49,6 @@ public class MagneticSkill : MonoBehaviour
         }
         else
         {
-            player.GetComponent<SpriteRenderer>().color = Color.white;
             forceDirection = Vector2.zero;
         }
             
@@ -78,7 +77,6 @@ public class MagneticSkill : MonoBehaviour
         }
         else
         {
-            player.GetComponent<SpriteRenderer>().color = Color.white;
             forceDirection = Vector2.zero;
         }
     }

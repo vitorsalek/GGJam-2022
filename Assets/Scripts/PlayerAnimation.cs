@@ -4,17 +4,23 @@ using UnityEngine;
 
 public class PlayerAnimation : MonoBehaviour
 {
-    
+    [SerializeField] private SpriteRenderer playerBody;
+    [SerializeField] private SpriteRenderer playerHead;
 
-    // Start is called before the first frame update
     void Start()
     {
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
+        Vector3 aimDir = (mousePos - transform.position).normalized;
+
+        playerHead.flipX = aimDir.x < 0;
+        playerBody.flipX = Input.GetAxisRaw("Horizontal") < 0;
     }
 
     public void DoSqueeze(float _xSqueeze, float _ySqueeze, float _seconds)
