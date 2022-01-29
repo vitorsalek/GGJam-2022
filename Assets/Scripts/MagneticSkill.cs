@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class MagneticSkill : MonoBehaviour
 {
-    public Camera cam;
-    public GameObject player;
     public float strengh;
     public float xForce;
     public float yForce;
@@ -13,6 +11,8 @@ public class MagneticSkill : MonoBehaviour
     public LayerMask magnetsLayer;
     [HideInInspector]public Vector2 forceDirection;
 
+    private Camera cam;
+    private GameObject player;
     [SerializeField] private SpriteRenderer staffRenderer;
     [SerializeField] private Sprite blueStaff;
     [SerializeField] private Sprite redStaff;
@@ -21,7 +21,8 @@ public class MagneticSkill : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        cam = Camera.main;
+        player = GameObject.FindGameObjectWithTag("Player");
     }
 
     // Update is called once per frame

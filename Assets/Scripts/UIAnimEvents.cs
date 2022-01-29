@@ -5,9 +5,13 @@ using UnityEngine;
 public class UIAnimEvents : MonoBehaviour
 {
 
-    public Animator menuBGAnim;
-    public PlayerDeath player;
+    private Animator menuBGAnim;
+    private PlayerDeath player;
 
+    private void Start()
+    {
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerDeath>();
+    }
     public void DesactivateThis()
     {
         gameObject.SetActive(false);
