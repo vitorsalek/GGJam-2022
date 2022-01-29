@@ -8,6 +8,8 @@ public class MagneticSkill : MonoBehaviour
     public GameObject player;
     public float strengh;
     public float xForce;
+    public float yForce;
+    public float maxMagnetDistance;
     public LayerMask magnetsLayer;
     [HideInInspector]public Vector2 forceDirection;
 
@@ -15,7 +17,7 @@ public class MagneticSkill : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        playerPolarity = Polarity.negative;
+
     }
 
     // Update is called once per frame
@@ -29,32 +31,52 @@ public class MagneticSkill : MonoBehaviour
     {
         transform.position = cam.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 10f));
 
-        if (Input.GetMouseButton(0) || Input.GetMouseButton(1))
+        if (Input.GetMouseButton(0))
         {
-            RaycastHit2D hit = Physics2D.Raycast(player.transform.position, transform.position - player.transform.position, 20f, magnetsLayer);
-            Debug.DrawRay(player.transform.position, transform.position - player.transform.position);
-            if (hit)
-            {
-                Vector2 destinationDirection = hit.point - new Vector2(player.transform.position.x, player.transform.position.y);
-                Polarity magnetPolarity = hit.rigidbody.gameObject.GetComponent<Magnet>().polarity;
-                if (magnetPolarity == playerPolarity)
-                {
-                    forceDirection = -destinationDirection.normalized;
-                    Debug.Log("afasta");
-                }
-                else
-                {
-                    forceDirection = destinationDirection.normalized;
-                    Debug.Log("atrai");
-                }
-                forceDirection = new Vector2(forceDirection.x * xForce, forceDirection.y).normalized;
-            }
-            else
-                forceDirection = Vector2.zero;
+            playerPolarity = Polarity.negative;
+            player.GetComponent<SpriteRenderer>().color = Color.red;
+            TurnMagnetOn();
+        }
+        else if (Input.GetMouseButton(1))
+        {
+            playerPolarity = Polarity.positive;
+            player.GetComponent<SpriteRenderer>().color = Color.blue;
+            TurnMagnetOn();
         }
         else
+        {
+            player.GetComponent<SpriteRenderer>().color = Color.white;
             forceDirection = Vector2.zero;
+        }
+            
 
+    }
+
+    public void TurnMagnetOn()
+    {
+        RaycastHit2D hit = Physics2D.Raycast(player.transform.position, transform.position - player.transform.position, maxMagnetDistance, magnetsLayer);
+        Debug.DrawRay(player.transform.position, transform.position - player.transform.position);
+        if (hit)
+        {
+            Vector2 destinationDirection = hit.point - new Vector2(player.transform.position.x, player.transform.position.y);
+            Polarity magnetPolarity = hit.rigidbody.gameObject.GetComponent<Magnet>().polarity;
+            if (magnetPolarity == playerPolarity)
+            {
+                forceDirection = -destinationDirection.normalized;
+                Debug.Log("afasta");
+            }
+            else
+            {
+                forceDirection = destinationDirection.normalized;
+                Debug.Log("atrai");
+            }
+            forceDirection = new Vector2(forceDirection.x * xForce, forceDirection.y * yForce).normalized;
+        }
+        else
+        {
+            player.GetComponent<SpriteRenderer>().color = Color.white;
+            forceDirection = Vector2.zero;
+        }
     }
 
 }

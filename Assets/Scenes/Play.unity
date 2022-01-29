@@ -239,8 +239,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 131531813}
   player: {fileID: 933499041}
-  strengh: 1
-  xForce: 3
+  strengh: 3
+  xForce: 5
+  yForce: 0.5
+  maxMagnetDistance: 10
   magnetsLayer:
     serializedVersion: 2
     m_Bits: 64
@@ -493,7 +495,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 131531809}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.1230882, y: -1.2132323, z: -10}
+  m_LocalPosition: {x: 1.1230884, y: -1.2132323, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -690,7 +692,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94b39cae23f59df4e92b93125b2c5689, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  polarity: 0
+  polarity: 1
 --- !u!50 &278057074
 Rigidbody2D:
   serializedVersion: 4
@@ -779,7 +781,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 7482667652216324306, guid: db750325989564987a34393247d883b4, type: 3}
-  m_Color: {r: 0.3803922, g: 0.8762289, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.41960788, b: 0.37647063, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -835,7 +837,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94b39cae23f59df4e92b93125b2c5689, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  polarity: 1
+  polarity: 0
 --- !u!50 &333243325
 Rigidbody2D:
   serializedVersion: 4
@@ -1102,7 +1104,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 923744888}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.1230882, y: -1.2132323, z: -10}
+  m_LocalPosition: {x: 1.1230884, y: -1.2132323, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1524911683}
