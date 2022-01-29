@@ -32,10 +32,13 @@ public class Movement2DController : MonoBehaviour
     private void FixedUpdate()
     {
         Vector2 moveVelocity = new Vector2(moveX * speed, rb.velocity.y);
-        //print("moveVelocity "+moveVelocity);
-        //print("forceDirection "+mouse.forceDirection*mouse.strengh);
-        rb.velocity = (moveVelocity + mouse.strengh*mouse.forceDirection);
-        print("soma " + (moveVelocity + mouse.strengh * mouse.forceDirection));
+        Vector2 magnetVelocity = (mouse.strengh * mouse.forceDirection);
+
+        //print("magnet antes: " + magnetVelocity);
+        magnetVelocity = new Vector2(magnetVelocity.x, Mathf.Clamp(magnetVelocity.y, -0.8f, 0.8f));
+        //print("magnet depois: " + magnetVelocity);
+
+        rb.velocity = (moveVelocity + magnetVelocity);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
