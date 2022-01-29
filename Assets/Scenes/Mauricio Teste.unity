@@ -247,6 +247,9 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   forceDirection: {x: 0, y: 0}
+  staffRenderer: {fileID: 2114170165}
+  blueStaff: {fileID: 21300000, guid: 89907565016397b4faf6065bde049e97, type: 3}
+  redStaff: {fileID: 21300000, guid: 604766d2fe26f6e4aaa1fd6174155812, type: 3}
 --- !u!58 &125713219
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1234,12 +1237,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 29f595f2edb39de42a31fd7523e6a0f1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 237d125211a733f41900694e25c3d775, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.16, y: 0.16}
+  m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -1933,7 +1936,7 @@ GameObject:
   - component: {fileID: 2114170164}
   - component: {fileID: 2114170165}
   m_Layer: 0
-  m_Name: Square
+  m_Name: StaffRenderer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

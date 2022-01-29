@@ -13,6 +13,10 @@ public class MagneticSkill : MonoBehaviour
     public LayerMask magnetsLayer;
     [HideInInspector]public Vector2 forceDirection;
 
+    [SerializeField] private SpriteRenderer staffRenderer;
+    [SerializeField] private Sprite blueStaff;
+    [SerializeField] private Sprite redStaff;
+
     private Polarity playerPolarity;
     // Start is called before the first frame update
     void Start()
@@ -34,13 +38,13 @@ public class MagneticSkill : MonoBehaviour
         if (Input.GetMouseButton(0))
         {
             playerPolarity = Polarity.negative;
-            player.GetComponent<SpriteRenderer>().color = Color.red;
+            staffRenderer.sprite = redStaff;
             TurnMagnetOn();
         }
         else if (Input.GetMouseButton(1))
         {
             playerPolarity = Polarity.positive;
-            player.GetComponent<SpriteRenderer>().color = Color.blue;
+            staffRenderer.sprite = blueStaff;
             TurnMagnetOn();
         }
         else
