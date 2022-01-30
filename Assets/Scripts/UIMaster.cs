@@ -65,7 +65,8 @@ public class UIMaster : MonoBehaviour
     public void GoToMainMenu()
     {
         //AudioManager.instance.Play("ButtonClick");
-        SceneManager.LoadScene("MainMenu");
         Time.timeScale = 1f;
+        SceneManager.LoadScene("MainMenu");
+        
     }
 }

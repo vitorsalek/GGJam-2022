@@ -24,9 +24,9 @@ public class AudioManager : MonoBehaviour
 
         if (PlayerPrefs.GetInt("FirstGame") == 0)
         {
-            PlayerPrefs.SetFloat("MasterSoundPrefs", 50f);
-            PlayerPrefs.SetFloat("BackgroundPrefs", 50f);
-            PlayerPrefs.SetFloat("SoundEffectsPrefs", 50f);
+            PlayerPrefs.SetFloat("MasterSoundPrefs", 100f);
+            PlayerPrefs.SetFloat("BackgroundPrefs", 100f);
+            PlayerPrefs.SetFloat("SoundEffectsPrefs", 100f);
             PlayerPrefs.SetInt("FirstGame", 1);
         }
 
