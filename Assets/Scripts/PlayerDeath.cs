@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class PlayerDeath : MonoBehaviour
 {
     public Image fadeImage;
+    public float timeUntilFade;
     Vector3 lastRespawnPosition;
 
     private void Start()
@@ -17,9 +18,12 @@ public class PlayerDeath : MonoBehaviour
     {
         if (collision.collider.CompareTag("Damage"))
         {
-            fadeImage.gameObject.SetActive(true);
+            GetComponent<PlayerAnimation>().DeathAnimation();
             Persistent.current.fadeOn = true;
-            fadeImage.gameObject.GetComponent<Animator>().Play("fadein");
+            GetComponent<Rigidbody2D>().simulated = false;
+            GetComponent<CapsuleCollider2D>().enabled = false;
+
+            StartCoroutine(PreDeathEvents());
         }
     }
 
@@ -34,29 +38,18 @@ public class PlayerDeath : MonoBehaviour
 
     public void ResetPlayerPos()
     {
+        GetComponent<PlayerAnimation>().DestroyDeathRemains();
+        gameObject.transform.GetChild(0).gameObject.SetActive(true);
+        gameObject.transform.GetChild(1).gameObject.SetActive(true);
+        GetComponent<Rigidbody2D>().simulated = true;
+        GetComponent<CapsuleCollider2D>().enabled = true;
         transform.position = lastRespawnPosition;
     }
-    /* public IEnumerator FadeImageDeath()
-     {
-         fadeImage.gameObject.SetActive(true);
 
-         // fade from transparent to black
-         fadeImage.color = new Color(0, 0, 0, 0);
-         for (float i = 0; i <= 1; i += Time.deltaTime)
-         {
-             fadeImage.color = new Color(0, 0, 0, i);
-             yield return null;
-         }
-
-         transform.position = lastRespawnPosition;
-
-         fadeImage.color = new Color(0, 0, 0, 1);
-         for (float i = 1; i >= 0; i -= Time.deltaTime)
-         {
-             fadeImage.color = new Color(0, 0, 0, i);
-             yield return null;
-         }
-
-         fadeImage.gameObject.SetActive(false);
-     }*/
+    public IEnumerator PreDeathEvents()
+    {
+        yield return new WaitForSeconds(timeUntilFade);
+        fadeImage.gameObject.SetActive(true);
+        fadeImage.gameObject.GetComponent<Animator>().Play("fadein");
+    }
 }

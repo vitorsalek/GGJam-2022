@@ -482,7 +482,7 @@ Transform:
   m_GameObject: {fileID: 6469043519417098260}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.051, y: -2.495, z: 0}
-  m_LocalScale: {x: 1.533528, y: 1.533528, z: 1.533528}
+  m_LocalScale: {x: 1.7384073, y: 1.7384073, z: 1.7384073}
   m_Children:
   - {fileID: 6469043519524436738}
   - {fileID: 6469043518787878368}
@@ -501,10 +501,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d0d8cd34e55e9f4794afc453205d5b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walkSpeed: 0
+  walkSpeed: 8
   jumpForce: 250
   mouse: {fileID: 0}
-  maxXSpeed: 0.6
+  maxXSpeed: 0.5
   maxYSpeed: 0.8
 --- !u!114 &6469043519417098257
 MonoBehaviour:
@@ -553,7 +553,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 2
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: e56dd75b9b85a6043a8702697de1d38a, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -567,7 +567,7 @@ CapsuleCollider2D:
   m_GameObject: {fileID: 6469043519417098260}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: e56dd75b9b85a6043a8702697de1d38a, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -587,6 +587,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadeImage: {fileID: 0}
+  timeUntilFade: 1
 --- !u!1 &6469043519524436739
 GameObject:
   m_ObjectHideFlags: 0

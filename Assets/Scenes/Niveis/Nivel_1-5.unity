@@ -83889,14 +83889,6 @@ PrefabInstance:
       propertyPath: mouse
       value: 
       objectReference: {fileID: 125713218}
-    - target: {fileID: 6469043519417098256, guid: ed65ad42fb9a45d4c9b35c6f9f736906, type: 3}
-      propertyPath: maxXSpeed
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6469043519417098256, guid: ed65ad42fb9a45d4c9b35c6f9f736906, type: 3}
-      propertyPath: walkSpeed
-      value: 8
-      objectReference: {fileID: 0}
     - target: {fileID: 6469043519417098260, guid: ed65ad42fb9a45d4c9b35c6f9f736906, type: 3}
       propertyPath: m_Name
       value: Player
@@ -83904,18 +83896,6 @@ PrefabInstance:
     - target: {fileID: 6469043519417098263, guid: ed65ad42fb9a45d4c9b35c6f9f736906, type: 3}
       propertyPath: m_RootOrder
       value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 6469043519417098263, guid: ed65ad42fb9a45d4c9b35c6f9f736906, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.7384073
-      objectReference: {fileID: 0}
-    - target: {fileID: 6469043519417098263, guid: ed65ad42fb9a45d4c9b35c6f9f736906, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1.7384073
-      objectReference: {fileID: 0}
-    - target: {fileID: 6469043519417098263, guid: ed65ad42fb9a45d4c9b35c6f9f736906, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1.7384073
       objectReference: {fileID: 0}
     - target: {fileID: 6469043519417098263, guid: ed65ad42fb9a45d4c9b35c6f9f736906, type: 3}
       propertyPath: m_LocalPosition.x
