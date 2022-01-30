@@ -12,7 +12,7 @@ public class MenuManager : MonoBehaviour
     public void LoadPlay()
     {
         //AudioManager.instance.Play("ButtonClick");
-        SceneManager.LoadScene("Play");
+        SceneManager.LoadScene("Nivel_1-5");
 
     }
 
