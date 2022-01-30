@@ -123,6 +123,71 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &37122593
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 37122595}
+  - component: {fileID: 37122594}
+  - component: {fileID: 37122596}
+  m_Layer: 0
+  m_Name: PersistentData
+  m_TagString: persistentData
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &37122594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 37122593}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5aa3c1516149054bb5c0c3b1c215858, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeOn: 0
+--- !u!4 &37122595
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 37122593}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1210.2836, y: 36.19653, z: -189.71106}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &37122596
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 37122593}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfb6603de29fa9d458fec9086f6fd257, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: Magnetovania
+    clip: {fileID: 8300000, guid: caf5155ce4400734083abfc231fa0b46, type: 3}
+    volume: 0.476
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  soundEffects: []
 --- !u!1 &156405848
 GameObject:
   m_ObjectHideFlags: 0
@@ -227,17 +292,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 258916732}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0.00034529547, w: 0.99999994}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 452346221}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.16666657}
-  m_AnchorMax: {x: 1, y: 0.83333343}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0.21850002}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -0.04}
+  m_AnchorMin: {x: 0, y: 0.21561688}
+  m_AnchorMax: {x: 1, y: 0.7941916}
+  m_AnchoredPosition: {x: 0, y: -0.5}
+  m_SizeDelta: {x: 0, y: -0.34049988}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &258916734
 MonoBehaviour:
@@ -2382,7 +2447,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1933646306}
   - component: {fileID: 1933646305}
-  - component: {fileID: 1933646307}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -2419,26 +2483,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1933646307
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1933646304}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cfb6603de29fa9d458fec9086f6fd257, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sounds:
-  - name: Magnetovania
-    clip: {fileID: 8300000, guid: caf5155ce4400734083abfc231fa0b46, type: 3}
-    volume: 0.476
-    pitch: 1
-    loop: 1
-    source: {fileID: 0}
-  soundEffects: []
 --- !u!1 &1993560588
 GameObject:
   m_ObjectHideFlags: 0
