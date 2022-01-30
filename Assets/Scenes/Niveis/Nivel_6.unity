@@ -118414,7 +118414,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a519c082d78dcb84a9b0a73becfc6a0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  goToScene: Nivel_7
+  goToScene: Fim
   fade: {fileID: 591116831}
 --- !u!61 &1681878091
 BoxCollider2D:
