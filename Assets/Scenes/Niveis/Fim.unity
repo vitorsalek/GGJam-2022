@@ -333,7 +333,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: ARTE
+  m_Text: ART
 --- !u!222 &128404755
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -653,7 +653,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "SONORIZA\xC7\xC3O"
+  m_Text: SOUND DESIGN
 --- !u!222 &172308765
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1150,7 +1150,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "PROGRAMA\xC7\xC3O"
+  m_Text: PROGRAMMING
 --- !u!222 &1083806807
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1229,7 +1229,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Sair
+  m_Text: Quit
 --- !u!222 &1159898944
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1671,7 +1671,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Obrigado por Jogar!
+  m_Text: Thank you for playing!
 --- !u!222 &1746869161
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1855,6 +1855,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5aa3c1516149054bb5c0c3b1c215858, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  paused: 0
   fadeOn: 0
   canChangeScene: 0
   timer: 0
