@@ -17,6 +17,8 @@ public class PlayerAnimation : MonoBehaviour
     [SerializeField] private float deathPump = 5f;
     [SerializeField] private float torqueSpeed = 4f;
 
+    GameObject headObj;
+    GameObject bodyObj;
 
     void Start()
     {
@@ -44,20 +46,25 @@ public class PlayerAnimation : MonoBehaviour
         bodySprite.flipX = Input.GetAxisRaw("Horizontal") < 0;
     }
 
-    void DeathAnimation()
+    public void DeathAnimation()
     {
-        GameObject headObj = Instantiate(headPrefab, playerHead.transform.position, Quaternion.identity);
+        headObj = Instantiate(headPrefab, playerHead.transform.position, Quaternion.identity);
         Rigidbody2D headRb = headObj.GetComponent<Rigidbody2D>();
 
         headRb.velocity = Vector2.up * deathPump;
         headRb.AddTorque(torqueSpeed, ForceMode2D.Force);
 
-        playerHead.SetActive(false);
-
-        GameObject bodyObj = Instantiate(bodyPrefab, playerBody.transform.position, Quaternion.identity);
+        bodyObj = Instantiate(bodyPrefab, playerBody.transform.position, Quaternion.identity);
         bodyObj.GetComponent<Animator>().Play("DeathAnimation");
 
-        gameObject.SetActive(false);
+        gameObject.transform.GetChild(0).gameObject.SetActive(false);
+        gameObject.transform.GetChild(1).gameObject.SetActive(false);
+    }
+
+    public void DestroyDeathRemains()
+    {
+        Destroy(headObj);
+        Destroy(bodyObj);
     }
 
     public void DoSqueeze(float _xSqueeze, float _ySqueeze, float _seconds)

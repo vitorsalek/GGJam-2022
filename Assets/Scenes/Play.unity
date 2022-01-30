@@ -3128,9 +3128,17 @@ PrefabInstance:
       propertyPath: mouse
       value: 
       objectReference: {fileID: 125713218}
+    - target: {fileID: 6469043519417098256, guid: ed65ad42fb9a45d4c9b35c6f9f736906, type: 3}
+      propertyPath: walkSpeed
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 6469043519417098260, guid: ed65ad42fb9a45d4c9b35c6f9f736906, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 6469043519417098260, guid: ed65ad42fb9a45d4c9b35c6f9f736906, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6469043519417098263, guid: ed65ad42fb9a45d4c9b35c6f9f736906, type: 3}
       propertyPath: m_RootOrder

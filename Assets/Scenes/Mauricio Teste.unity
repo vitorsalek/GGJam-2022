@@ -237,8 +237,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2171c506104ff64c8cdf01570181bdf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cam: {fileID: 131531813}
-  player: {fileID: 933499041}
   strengh: 3
   xForce: 5
   yForce: 0.5
@@ -1158,11 +1156,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &933499041 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6469043519417098260, guid: ed65ad42fb9a45d4c9b35c6f9f736906, type: 3}
-  m_PrefabInstance: {fileID: 6469043518634602677}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &933499042 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6469043519417098263, guid: ed65ad42fb9a45d4c9b35c6f9f736906, type: 3}
@@ -1869,6 +1862,10 @@ PrefabInstance:
       propertyPath: mouse
       value: 
       objectReference: {fileID: 125713218}
+    - target: {fileID: 6469043519417098256, guid: ed65ad42fb9a45d4c9b35c6f9f736906, type: 3}
+      propertyPath: walkSpeed
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 6469043519417098257, guid: ed65ad42fb9a45d4c9b35c6f9f736906, type: 3}
       propertyPath: bodyPrefab
       value: 
