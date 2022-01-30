@@ -154,6 +154,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadeOn: 0
+  canChangeScene: 0
 --- !u!4 &37122595
 Transform:
   m_ObjectHideFlags: 0
@@ -187,7 +188,19 @@ MonoBehaviour:
     pitch: 1
     loop: 1
     source: {fileID: 0}
-  soundEffects: []
+  soundEffects:
+  - name: Death
+    clip: {fileID: 8300000, guid: 76c4785523124ff4abfbdf85d37c1ef8, type: 3}
+    volume: 0.507
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Pulo
+    clip: {fileID: 8300000, guid: cd412be8cbadcb943ab3c78c8a3a22ce, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
 --- !u!1 &156405848
 GameObject:
   m_ObjectHideFlags: 0
