@@ -15,11 +15,14 @@ public class Movement2DController : MonoBehaviour
     bool isGrounded = true;
     Persistent persistent;
 
+    private Animator playerBody;
+
     // Start is called before the first frame update
     void Start()
     {
         persistent = Persistent.current;
         rb = GetComponent<Rigidbody2D>();
+        playerBody = transform.GetChild(0).GetChild(1).GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -57,6 +60,8 @@ public class Movement2DController : MonoBehaviour
             //print("magnet depois: " + magnetVelocity);
 
             rb.velocity = (moveVelocity + magnetVelocity);
+            playerBody.SetFloat("walkOn", Mathf.Abs(moveX));
+
         }
     }
 
