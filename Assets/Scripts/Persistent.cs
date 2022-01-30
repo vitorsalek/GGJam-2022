@@ -9,6 +9,8 @@ public class Persistent : MonoBehaviour
     [HideInInspector] public bool fadeOn;
     [HideInInspector] public bool canChangeScene;
 
+    [HideInInspector] public float timer;
+
     private void Awake()
     {
 
