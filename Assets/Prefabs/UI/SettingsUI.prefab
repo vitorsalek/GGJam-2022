@@ -452,8 +452,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 64.727005}
-  m_SizeDelta: {x: 0.55999756, y: 0.91400146}
+  m_AnchoredPosition: {x: -5, y: 55.418}
+  m_SizeDelta: {x: 120.9565, y: 19.532}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6957347018975957593
 CanvasRenderer:
@@ -496,7 +496,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\xC1udio Geral"
+  m_Text: General Audio
 --- !u!1 &1415988745474558776
 GameObject:
   m_ObjectHideFlags: 0
@@ -531,8 +531,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -0.7869034, y: 0}
+  m_SizeDelta: {x: -37.7683, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5370990922233784875
 CanvasRenderer:
@@ -555,7 +555,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.16037738, g: 0.1565949, b: 0.1565949, a: 1}
+  m_Color: {r: 0.05660379, g: 0.05633679, b: 0.05633679, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -575,7 +575,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Voltar
+  m_Text: Quit
 --- !u!1 &2037024127710768712
 GameObject:
   m_ObjectHideFlags: 0
@@ -685,8 +685,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.0000076293945, y: 64.727}
-  m_SizeDelta: {x: 416.56, y: 64.914}
+  m_AnchoredPosition: {x: -5, y: 55.819}
+  m_SizeDelta: {x: 292.7767, y: 64.914}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4987265098010561878
 CanvasRenderer:
@@ -729,7 +729,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Efeitos Sonoros
+  m_Text: Sound Effects
 --- !u!1 &2504045781476506647
 GameObject:
   m_ObjectHideFlags: 0
@@ -1138,8 +1138,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.44774997, y: 0.060210038}
   m_AnchorMax: {x: 0.5523959, y: 0.147}
-  m_AnchoredPosition: {x: 0.000022888184, y: 1}
-  m_SizeDelta: {x: 5.253006, y: 6.003998}
+  m_AnchoredPosition: {x: -0.7868, y: 1}
+  m_SizeDelta: {x: 36.7265, y: 6.004}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &596806044134979615
 CanvasRenderer:
@@ -1169,8 +1169,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: ae9631c48086b3245b9331400f6c6c6d, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -1308,10 +1308,10 @@ RectTransform:
   m_Father: {fileID: 2923284251946781549}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.74747497}
+  m_AnchorMin: {x: 0, y: 0.77979815}
   m_AnchorMax: {x: 1, y: 0.96673506}
-  m_AnchoredPosition: {x: 0.49993896, y: 1.5}
-  m_SizeDelta: {x: 1, y: 1.5390015}
+  m_AnchoredPosition: {x: 0.5, y: 3.2733002}
+  m_SizeDelta: {x: 1, y: 7.3161}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3285988055323853992
 CanvasRenderer:
@@ -1354,7 +1354,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Som
+  m_Text: Sound
 --- !u!1 &7361608500514138349
 GameObject:
   m_ObjectHideFlags: 0
@@ -1727,8 +1727,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.000015258789, y: 64.727}
-  m_SizeDelta: {x: 0.55999756, y: 0.91400146}
+  m_AnchoredPosition: {x: 0.0000076293945, y: 52.491}
+  m_SizeDelta: {x: 74.147, y: 13.5083}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &813830536850904217
 CanvasRenderer:
@@ -1771,7 +1771,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "M\xFAsica"
+  m_Text: Music
 --- !u!1 &8629868990150115773
 GameObject:
   m_ObjectHideFlags: 0

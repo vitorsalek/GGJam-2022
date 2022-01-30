@@ -272,7 +272,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Jogar
+  m_Text: Play
 --- !u!222 &156405851
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -351,7 +351,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Op\xE7\xF5es"
+  m_Text: Options
 --- !u!222 &258916735
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -505,7 +505,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "SONORIZA\xC7\xC3O"
+  m_Text: SOUND DESIGN
 --- !u!222 &378616679
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -959,7 +959,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Cr\xE9ditos"
+  m_Text: Credits
 --- !u!222 &670950152
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1626,7 +1626,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "CR\xC9DITOS"
+  m_Text: CREDITS
 --- !u!222 &1048381030
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1705,7 +1705,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: ARTE
+  m_Text: ART
 --- !u!222 &1132152446
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1859,7 +1859,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Sair
+  m_Text: Quit
 --- !u!222 &1219514925
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2106,7 +2106,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Sair
+  m_Text: QUIT
 --- !u!222 &1473481839
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2318,7 +2318,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "PROGRAMA\xC7\xC3O"
+  m_Text: PROGRAMMING
 --- !u!222 &1558563074
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2632,8 +2632,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.30568746, y: 0.27414817}
   m_AnchorMax: {x: 0.5, y: 0.37870374}
-  m_AnchoredPosition: {x: -1.3200073, y: -46.191}
-  m_SizeDelta: {x: 2.66, y: 93.594}
+  m_AnchoredPosition: {x: -1.3200073, y: 0.30300903}
+  m_SizeDelta: {x: 2.66, y: 0.60602}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1993560590
 MonoBehaviour:
@@ -2747,10 +2747,10 @@ RectTransform:
   m_Father: {fileID: 3679037711218754193}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.43100002, y: 0.7781482}
-  m_AnchorMax: {x: 0.57000005, y: 0.938}
-  m_AnchoredPosition: {x: -0.5, y: 0.5}
-  m_SizeDelta: {x: -4.4610596, y: -0.10500336}
+  m_AnchorMin: {x: 0.4216666, y: 0.77818185}
+  m_AnchorMax: {x: 0.57829165, y: 0.938}
+  m_AnchoredPosition: {x: -6.627, y: 0.05255127}
+  m_SizeDelta: {x: -9.682, y: -0.10500002}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &489146814397660367
 GameObject:
@@ -3184,7 +3184,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Voltar
+  m_Text: Quit
 --- !u!1 &2900601220815086193
 GameObject:
   m_ObjectHideFlags: 0
@@ -3271,7 +3271,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Efeitos
+  m_Text: Sound Effects
 --- !u!114 &3287297548386501081
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3499,10 +3499,10 @@ RectTransform:
   m_Father: {fileID: 3679037711218754193}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.44566664, y: 0.2722963}
-  m_AnchorMax: {x: 0.5544792, y: 0.34140745}
-  m_AnchoredPosition: {x: -0.6200638, y: 0.2999878}
-  m_SizeDelta: {x: -0.6851959, y: -3.1696014}
+  m_AnchorMin: {x: 0.39247915, y: 0.2687273}
+  m_AnchorMax: {x: 0.61, y: 0.34140745}
+  m_AnchoredPosition: {x: -2.5394592, y: 2.2999878}
+  m_SizeDelta: {x: -2.2799988, y: -7.17}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &4303275124360261806
 RectTransform:
@@ -3579,7 +3579,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Som
+  m_Text: Sound
 --- !u!224 &4442248105852737299
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3595,9 +3595,9 @@ RectTransform:
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.44300002, y: 0.4525495}
-  m_AnchorMax: {x: 0.5574792, y: 0.52225906}
-  m_AnchoredPosition: {x: -0.12011719, y: 8.5}
-  m_SizeDelta: {x: -0.66137695, y: -0.3295288}
+  m_AnchorMax: {x: 0.55852085, y: 0.5303637}
+  m_AnchoredPosition: {x: -1.1201172, y: 4}
+  m_SizeDelta: {x: -2.661377, y: -9.329529}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &4704555140390307647
 RectTransform:
@@ -3844,7 +3844,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "M\xFAsica"
+  m_Text: Music
 --- !u!1 &5618805713065456551
 GameObject:
   m_ObjectHideFlags: 0
@@ -3957,10 +3957,10 @@ RectTransform:
   m_Father: {fileID: 3679037711218754193}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.40352085, y: 0.6526388}
-  m_AnchorMax: {x: 0.596, y: 0.72800004}
-  m_AnchoredPosition: {x: 0.82006836, y: 1}
-  m_SizeDelta: {x: 0.5344238, y: 0.31048584}
+  m_AnchorMin: {x: 0.39247915, y: 0.6563425}
+  m_AnchorMax: {x: 0.61, y: 0.72800004}
+  m_AnchoredPosition: {x: -2.4403229, y: -1}
+  m_SizeDelta: {x: -1.9199982, y: 4.31}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &6422382006627173561
 MonoBehaviour:
@@ -4441,7 +4441,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\xC1udio Geral"
+  m_Text: General Audio
 --- !u!1 &8524266078273624444
 GameObject:
   m_ObjectHideFlags: 0
