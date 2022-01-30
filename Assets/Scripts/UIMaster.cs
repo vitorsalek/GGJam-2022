@@ -14,6 +14,7 @@ public class UIMaster : MonoBehaviour
     private void Start()
     {
         _paused = false;
+        Persistent.current.paused = false;
     }
 
     private void Update()
@@ -27,6 +28,7 @@ public class UIMaster : MonoBehaviour
         if (_paused)
         {
             _paused = false;
+            Persistent.current.paused = false;
             Time.timeScale = 1f;
             pauseMenuUI.SetActive(false);
             return;
@@ -35,6 +37,7 @@ public class UIMaster : MonoBehaviour
         {
             pauseMenuUI.SetActive(true);
             Time.timeScale = 0f;
+            Persistent.current.paused = true;
             _paused = true;
         }
     }
@@ -42,6 +45,7 @@ public class UIMaster : MonoBehaviour
     public void BackToGame()
     {
         //AudioManager.instance.Play("ButtonClick");
+        Persistent.current.paused = false;
         pauseMenuUI.SetActive(false);
         _paused = false;
         Time.timeScale = 1f;

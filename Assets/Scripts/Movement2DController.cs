@@ -28,7 +28,7 @@ public class Movement2DController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!persistent.fadeOn || !persistent.paused)
+        if (!persistent.fadeOn && !persistent.paused)
         {
             moveX = Input.GetAxisRaw("Horizontal");
             if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
@@ -55,7 +55,7 @@ public class Movement2DController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (!persistent.fadeOn)
+        if (!persistent.fadeOn && !persistent.paused)
         {
             Vector2 moveVelocity;
             if (moveX != 0 || isGrounded)

@@ -15,7 +15,7 @@ public class PlayerAim : MonoBehaviour
     }
     void Update()
     {
-        if (!Persistent.current.fadeOn || !Persistent.current.paused)
+        if (!Persistent.current.fadeOn && !Persistent.current.paused)
         {
             mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 

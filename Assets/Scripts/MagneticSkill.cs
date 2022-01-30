@@ -38,40 +38,36 @@ public class MagneticSkill : MonoBehaviour
 
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-        
-    }
 
     private void FixedUpdate()
     {
-        transform.position = cam.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 10f));
+        if (!Persistent.current.fadeOn && !Persistent.current.paused)
+        {
+            transform.position = cam.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 10f));
 
-        if (Input.GetMouseButton(0))
-        {
-            playerPolarity = Polarity.negative;
-            staffRenderer.sprite = redStaff;
-            staffLight.color = Color.red;
-            staffLight.gameObject.SetActive(true);
-            TurnMagnetOn();
+            if (Input.GetMouseButton(0))
+            {
+                playerPolarity = Polarity.negative;
+                staffRenderer.sprite = redStaff;
+                staffLight.color = Color.red;
+                staffLight.gameObject.SetActive(true);
+                TurnMagnetOn();
+            }
+            else if (Input.GetMouseButton(1))
+            {
+                playerPolarity = Polarity.positive;
+                staffRenderer.sprite = blueStaff;
+                staffLight.color = Color.blue;
+                staffLight.gameObject.SetActive(true);
+                TurnMagnetOn();
+            }
+            else
+            {
+                forceDirection = Vector2.zero;
+                staffLight.gameObject.SetActive(false);
+                staffPower.Play("PowerOff");
+            }
         }
-        else if (Input.GetMouseButton(1))
-        {
-            playerPolarity = Polarity.positive;
-            staffRenderer.sprite = blueStaff;
-            staffLight.color = Color.blue;
-            staffLight.gameObject.SetActive(true);
-            TurnMagnetOn();
-        }
-        else
-        {
-            forceDirection = Vector2.zero;
-            staffLight.gameObject.SetActive(false);
-            staffPower.Play("PowerOff");
-        }
-            
     }
 
     public void TurnMagnetOn()

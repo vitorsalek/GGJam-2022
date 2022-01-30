@@ -30,7 +30,7 @@ public class PlayerAnimation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!Persistent.current.fadeOn || !Persistent.current.paused)
+        if (!Persistent.current.fadeOn && !Persistent.current.paused)
         {
             FlipSprites();
         }
