@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Experimental.Rendering.Universal;
 
 public class MagneticSkill : MonoBehaviour
 {
@@ -17,6 +18,7 @@ public class MagneticSkill : MonoBehaviour
     [SerializeField] private Sprite blueStaff;
     [SerializeField] private Sprite redStaff;
     private Animator staffPower;
+    private Light2D staffLight;
 
     private Polarity playerPolarity;
     // Start is called before the first frame update
@@ -25,7 +27,8 @@ public class MagneticSkill : MonoBehaviour
         cam = Camera.main;
         player = GameObject.FindGameObjectWithTag("Player");
         staffPower = staffRenderer.gameObject.transform.parent.GetChild(1).GetChild(0).GetComponent<Animator>();
-    }
+        staffLight = staffRenderer.gameObject.transform.parent.GetChild(1).GetChild(1).GetComponent<Light2D>(); ;
+}
 
     // Update is called once per frame
     void Update()
@@ -42,17 +45,22 @@ public class MagneticSkill : MonoBehaviour
         {
             playerPolarity = Polarity.negative;
             staffRenderer.sprite = redStaff;
+            staffLight.color = Color.red;
+            staffLight.gameObject.SetActive(true);
             TurnMagnetOn();
         }
         else if (Input.GetMouseButton(1))
         {
             playerPolarity = Polarity.positive;
             staffRenderer.sprite = blueStaff;
+            staffLight.color = Color.blue;
+            staffLight.gameObject.SetActive(true);
             TurnMagnetOn();
         }
         else
         {
             forceDirection = Vector2.zero;
+            staffLight.gameObject.SetActive(false);
             staffPower.Play("PowerOff");
         }
             
