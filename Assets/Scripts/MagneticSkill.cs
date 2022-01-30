@@ -67,12 +67,12 @@ public class MagneticSkill : MonoBehaviour
             if (magnetPolarity == playerPolarity)
             {
                 forceDirection = -destinationDirection.normalized;
-                Debug.Log("afasta");
+                //Debug.Log("afasta");
             }
             else
             {
                 forceDirection = destinationDirection.normalized;
-                Debug.Log("atrai");
+                //Debug.Log("atrai");
             }
             forceDirection = new Vector2(forceDirection.x * xForce, forceDirection.y * yForce).normalized;
         }
