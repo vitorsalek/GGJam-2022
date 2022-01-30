@@ -16,6 +16,7 @@ public class MagneticSkill : MonoBehaviour
     [SerializeField] private SpriteRenderer staffRenderer;
     [SerializeField] private Sprite blueStaff;
     [SerializeField] private Sprite redStaff;
+    private Animator staffPower;
 
     private Polarity playerPolarity;
     // Start is called before the first frame update
@@ -23,6 +24,7 @@ public class MagneticSkill : MonoBehaviour
     {
         cam = Camera.main;
         player = GameObject.FindGameObjectWithTag("Player");
+        staffPower = staffRenderer.gameObject.transform.parent.GetChild(1).GetChild(0).GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -51,6 +53,7 @@ public class MagneticSkill : MonoBehaviour
         else
         {
             forceDirection = Vector2.zero;
+            staffPower.Play("Idle");
         }
             
 
@@ -67,11 +70,19 @@ public class MagneticSkill : MonoBehaviour
             if (magnetPolarity == playerPolarity)
             {
                 forceDirection = -destinationDirection.normalized;
+                if(playerPolarity == Polarity.positive)
+                    staffPower.Play("BlueRepel");
+                else
+                    staffPower.Play("RedRepel");
                 //Debug.Log("afasta");
             }
             else
             {
                 forceDirection = destinationDirection.normalized;
+                if (playerPolarity == Polarity.positive)
+                    staffPower.Play("BlueAttract");
+                else
+                    staffPower.Play("RedAttract");
                 //Debug.Log("atrai");
             }
             forceDirection = new Vector2(forceDirection.x * xForce, forceDirection.y * yForce).normalized;
@@ -79,6 +90,7 @@ public class MagneticSkill : MonoBehaviour
         else
         {
             forceDirection = Vector2.zero;
+            staffPower.Play("Idle");
         }
     }
 
