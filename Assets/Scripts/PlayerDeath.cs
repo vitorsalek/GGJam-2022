@@ -21,6 +21,7 @@ public class PlayerDeath : MonoBehaviour
         if (collision.collider.CompareTag("Damage"))
         {
             GetComponent<PlayerAnimation>().DeathAnimation();
+            AudioManager.instance.Play("Death");
             Persistent.current.fadeOn = true;
             GetComponent<Rigidbody2D>().simulated = false;
             GetComponent<CapsuleCollider2D>().enabled = false;

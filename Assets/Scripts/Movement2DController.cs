@@ -32,7 +32,12 @@ public class Movement2DController : MonoBehaviour
         {
             moveX = Input.GetAxisRaw("Horizontal");
             if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
+            {
                 rb.AddForce(Vector3.up * jumpForce, ForceMode2D.Impulse);
+                AudioManager.instance.Play("Pulo");
+            }
+                
+
         }
         else
         {
