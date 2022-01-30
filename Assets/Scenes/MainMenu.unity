@@ -155,6 +155,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fadeOn: 0
   canChangeScene: 0
+  timer: 0
 --- !u!4 &37122595
 Transform:
   m_ObjectHideFlags: 0
@@ -2566,7 +2567,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1.2
-  m_Text: "V\xEDtor Vasconcelos\n\xCDgor Ferreira\r\nMaur\xEDcio Wolff\n"
+  m_Text: "V\xEDtor Vasconcelos\n"
 --- !u!222 &1993560591
 CanvasRenderer:
   m_ObjectHideFlags: 0
