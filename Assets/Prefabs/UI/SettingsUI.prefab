@@ -1518,7 +1518,7 @@ GameObject:
   - component: {fileID: 4207957750002347418}
   m_Layer: 5
   m_Name: MusicSlider
-  m_TagString: BackgrounddSlider
+  m_TagString: BackgroundSlider
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
