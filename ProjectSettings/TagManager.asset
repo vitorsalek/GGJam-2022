@@ -11,6 +11,7 @@ TagManager:
   - checkpoint
   - persistentData
   - BackgroundSlider
+  - fade
   layers:
   - Default
   - TransparentFX

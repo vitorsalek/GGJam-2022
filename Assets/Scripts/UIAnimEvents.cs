@@ -44,4 +44,9 @@ public class UIAnimEvents : MonoBehaviour
     {
         player.ResetPlayerPos();
     }
+
+    public void canChangeScene()
+    {
+        Persistent.current.canChangeScene = true;
+    }
 }

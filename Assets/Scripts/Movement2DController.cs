@@ -34,6 +34,10 @@ public class Movement2DController : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
                 rb.AddForce(Vector3.up * jumpForce, ForceMode2D.Impulse);
         }
+        else
+        {
+            moveX = 0;
+        }
 
         RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, 0.95f);
         if (hit && hit.transform.CompareTag("ground"))

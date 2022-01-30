@@ -11,6 +11,8 @@ public class PlayerDeath : MonoBehaviour
 
     private void Start()
     {
+        if (Persistent.current.fadeOn)
+            fadeImage.gameObject.GetComponent<Animator>().Play("fadeout");
         lastRespawnPosition = transform.position;
     }
 
