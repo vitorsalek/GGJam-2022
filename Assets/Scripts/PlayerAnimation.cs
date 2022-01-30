@@ -30,10 +30,10 @@ public class PlayerAnimation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        FlipSprites();
-
-        if (Input.GetKeyDown(KeyCode.P))
-            DeathAnimation();
+        if (!Persistent.current.fadeOn || !Persistent.current.paused)
+        {
+            FlipSprites();
+        }
     }
 
     void FlipSprites()

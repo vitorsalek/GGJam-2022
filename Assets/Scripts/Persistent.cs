@@ -6,6 +6,7 @@ public class Persistent : MonoBehaviour
 {
     public static Persistent current;
 
+    [HideInInspector] public bool paused;
     [HideInInspector] public bool fadeOn;
     [HideInInspector] public bool canChangeScene;
 

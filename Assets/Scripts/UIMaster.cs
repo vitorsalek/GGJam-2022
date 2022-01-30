@@ -57,7 +57,6 @@ public class UIMaster : MonoBehaviour
     public void BackToPauseMenu()
     {
         //AudioManager.instance.Play("ButtonClick");
-        Time.timeScale = 1f;
         pauseMenuUI.SetActive(true);
         settingsUI.SetActive(false);
 
