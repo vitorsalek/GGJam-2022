@@ -20,6 +20,7 @@ public class MagneticSkill : MonoBehaviour
     private Animator staffPower;
     private Light2D staffLight;
     private Light2D staffRange;
+    private Transform staffRangeSprite;
 
     private Polarity playerPolarity;
     // Start is called before the first frame update
@@ -31,6 +32,10 @@ public class MagneticSkill : MonoBehaviour
         staffLight = staffRenderer.gameObject.transform.parent.GetChild(1).GetChild(1).GetComponent<Light2D>();
         staffRange = player.transform.GetChild(2).GetComponent<Light2D>();
         staffRange.pointLightOuterRadius = maxMagnetDistance;
+        staffRangeSprite = staffRange.gameObject.transform.GetChild(0);
+        float multiplyingFactor = 0.38f;
+        staffRangeSprite.localScale = new Vector3(maxMagnetDistance*multiplyingFactor, maxMagnetDistance*multiplyingFactor, 1f);
+
     }
 
     // Update is called once per frame
