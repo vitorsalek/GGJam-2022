@@ -348,7 +348,7 @@ Transform:
   m_GameObject: {fileID: 6469043519417098260}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.051, y: -2.495, z: 0}
-  m_LocalScale: {x: 1.14, y: 1.14, z: 1.14}
+  m_LocalScale: {x: 1.533528, y: 1.533528, z: 1.533528}
   m_Children:
   - {fileID: 6469043519524436738}
   - {fileID: 6469043518787878368}
@@ -370,6 +370,8 @@ MonoBehaviour:
   speed: 7
   jumpForce: 250
   mouse: {fileID: 0}
+  maxXSpeed: 0.6
+  maxYSpeed: 0.8
 --- !u!114 &6469043519417098257
 MonoBehaviour:
   m_ObjectHideFlags: 0

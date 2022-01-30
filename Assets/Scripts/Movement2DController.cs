@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class Movement2DController : MonoBehaviour
 {
-    public float speed;
+    public float walkSpeed;
     public float jumpForce;
     public MagneticSkill mouse;
+    public float maxXSpeed;
+    public float maxYSpeed;
 
     Rigidbody2D rb;
     float moveX;
@@ -35,11 +37,15 @@ public class Movement2DController : MonoBehaviour
     {
         if (!persistent.fadeOn)
         {
-            Vector2 moveVelocity = new Vector2(moveX * speed, rb.velocity.y);
+            Vector2 moveVelocity;
+            if (moveX != 0 || isGrounded)
+                moveVelocity = new Vector2(moveX * walkSpeed, rb.velocity.y);
+            else
+                moveVelocity = new Vector2(rb.velocity.x, rb.velocity.y);
             Vector2 magnetVelocity = (mouse.strengh * mouse.forceDirection);
 
             //print("magnet antes: " + magnetVelocity);
-            magnetVelocity = new Vector2(magnetVelocity.x, Mathf.Clamp(magnetVelocity.y, -0.8f, 0.8f));
+            magnetVelocity = new Vector2(Mathf.Clamp(magnetVelocity.x, -maxXSpeed, maxXSpeed), Mathf.Clamp(magnetVelocity.y, -maxYSpeed, maxYSpeed));
             //print("magnet depois: " + magnetVelocity);
 
             rb.velocity = (moveVelocity + magnetVelocity);
