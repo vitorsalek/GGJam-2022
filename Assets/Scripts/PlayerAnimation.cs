@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Experimental.Rendering.Universal;
 
 public class PlayerAnimation : MonoBehaviour
 {
@@ -58,7 +59,10 @@ public class PlayerAnimation : MonoBehaviour
         bodyObj.GetComponent<Animator>().Play("DeathAnimation");
 
         gameObject.transform.GetChild(0).gameObject.SetActive(false);
-        gameObject.transform.GetChild(1).gameObject.SetActive(false);
+        gameObject.transform.GetChild(1).GetChild(0).gameObject.SetActive(false);
+        gameObject.transform.GetChild(1).GetChild(1).GetChild(1).GetComponent<Light2D>().enabled = false;
+        gameObject.transform.GetChild(1).GetChild(1).GetChild(0).GetComponent<SpriteRenderer>().enabled=false;
+        
     }
 
     public void DestroyDeathRemains()
