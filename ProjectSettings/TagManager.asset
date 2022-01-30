@@ -6,11 +6,11 @@ TagManager:
   tags:
   - ground
   - MasterSlider
-  - BackgrounddSlider
   - EffectsSlider
   - Damage
   - checkpoint
   - persistentData
+  - BackgroundSlider
   layers:
   - Default
   - TransparentFX
