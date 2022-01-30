@@ -53,10 +53,9 @@ public class MagneticSkill : MonoBehaviour
         else
         {
             forceDirection = Vector2.zero;
-            staffPower.Play("Idle");
+            staffPower.Play("PowerOff");
         }
             
-
     }
 
     public void TurnMagnetOn()
@@ -90,7 +89,7 @@ public class MagneticSkill : MonoBehaviour
         else
         {
             forceDirection = Vector2.zero;
-            staffPower.Play("Idle");
+            staffPower.Play("PowerOff");
         }
     }
 
