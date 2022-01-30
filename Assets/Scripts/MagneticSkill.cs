@@ -19,6 +19,7 @@ public class MagneticSkill : MonoBehaviour
     [SerializeField] private Sprite redStaff;
     private Animator staffPower;
     private Light2D staffLight;
+    private Light2D staffRange;
 
     private Polarity playerPolarity;
     // Start is called before the first frame update
@@ -27,14 +28,16 @@ public class MagneticSkill : MonoBehaviour
         cam = Camera.main;
         player = GameObject.FindGameObjectWithTag("Player");
         staffPower = staffRenderer.gameObject.transform.parent.GetChild(1).GetChild(0).GetComponent<Animator>();
-        staffLight = staffRenderer.gameObject.transform.parent.GetChild(1).GetChild(1).GetComponent<Light2D>(); ;
-}
+        staffLight = staffRenderer.gameObject.transform.parent.GetChild(1).GetChild(1).GetComponent<Light2D>();
+        staffRange = player.transform.GetChild(2).GetComponent<Light2D>();
+        staffRange.pointLightOuterRadius = maxMagnetDistance;
+    }
 
     // Update is called once per frame
     void Update()
     {
-
-
+        
+        
     }
 
     private void FixedUpdate()
@@ -100,5 +103,7 @@ public class MagneticSkill : MonoBehaviour
             staffPower.Play("PowerOff");
         }
     }
+
+
 
 }
