@@ -12,7 +12,7 @@ public class Movement2DController : MonoBehaviour
 
     Rigidbody2D rb;
     float moveX;
-    bool isGrounded=true;
+    bool isGrounded = true;
     Persistent persistent;
 
     // Start is called before the first frame update
@@ -31,6 +31,14 @@ public class Movement2DController : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
                 rb.AddForce(Vector3.up * jumpForce, ForceMode2D.Impulse);
         }
+
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, 0.95f);
+        if (hit && hit.transform.CompareTag("ground"))
+        {
+            isGrounded = true;
+        }
+        else
+            isGrounded = false;
     }
 
     private void FixedUpdate()

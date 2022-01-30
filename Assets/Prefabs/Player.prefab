@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6102088861140790571}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42,7 +42,7 @@ GameObject:
   - component: {fileID: 4058492281051493956}
   - component: {fileID: 6522928968085926450}
   - component: {fileID: 1065255833541384617}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Circle (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -144,7 +144,7 @@ GameObject:
   - component: {fileID: 6469043517490293040}
   - component: {fileID: 6469043517490293042}
   - component: {fileID: 6469043517490293043}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -245,7 +245,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6469043518466792833}
   - component: {fileID: 6469043518466792832}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: StaffRenderer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -326,7 +326,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6469043518787878368}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Staff
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -360,7 +360,7 @@ GameObject:
   - component: {fileID: 6469043519065946792}
   - component: {fileID: 6469043519065946795}
   - component: {fileID: 6469043519065946794}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -466,7 +466,7 @@ GameObject:
   - component: {fileID: 6469043519417098259}
   - component: {fileID: 6469043519417098262}
   - component: {fileID: 8514117799791775123}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -597,7 +597,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6469043519524436738}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Sprites
   m_TagString: Untagged
   m_Icon: {fileID: 0}
