@@ -5,6 +5,7 @@ using UnityEngine;
 public class SceneMusic : MonoBehaviour
 {
     public string musicName;
+    public bool persistToNextScene;
     // Start is called before the first frame update
     void Start()
     {
@@ -12,7 +13,7 @@ public class SceneMusic : MonoBehaviour
     }
     private void OnDestroy()
     {
-        if (AudioManager.instance != null)
+        if (AudioManager.instance != null && !persistToNextScene)
             AudioManager.instance.StopAllMusicSounds();
     }
 }

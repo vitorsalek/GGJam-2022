@@ -31,8 +31,9 @@ public class Movement2DController : MonoBehaviour
         if (!persistent.fadeOn && !persistent.paused)
         {
             moveX = Input.GetAxisRaw("Horizontal");
-            if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
+            if ((Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown("up") || Input.GetKeyDown("w")) && isGrounded)
             {
+                isGrounded = false;
                 rb.AddForce(Vector3.up * jumpForce, ForceMode2D.Impulse);
                 AudioManager.instance.Play("Pulo");
             }
@@ -43,14 +44,16 @@ public class Movement2DController : MonoBehaviour
         {
             moveX = 0;
         }
-
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, 0.95f);
+        /*
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, ray);
         if (hit && hit.transform.CompareTag("ground"))
         {
             isGrounded = true;
         }
         else
+        {
             isGrounded = false;
+        }*/
     }
 
     private void FixedUpdate()
@@ -77,7 +80,13 @@ public class Movement2DController : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("ground"))
-            isGrounded = true;
+        {
+            RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, 0.89f);
+            if (hit && hit.transform.CompareTag("ground"))
+            {
+                isGrounded = true;
+            }
+        }
     }
 
     private void OnCollisionExit2D(Collision2D collision)
