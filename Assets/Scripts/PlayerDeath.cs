@@ -48,6 +48,7 @@ public class PlayerDeath : MonoBehaviour
         gameObject.transform.GetChild(1).GetChild(1).GetChild(0).GetComponent<SpriteRenderer>().enabled = true;
         gameObject.transform.GetChild(1).GetChild(1).GetChild(1).gameObject.SetActive(false);
         gameObject.transform.GetChild(1).GetChild(1).GetChild(1).GetComponent<Light2D>().enabled = true;
+        GetComponent<Rigidbody2D>().velocity = Vector2.zero;
         GetComponent<Rigidbody2D>().simulated = true;
         GetComponent<CapsuleCollider2D>().enabled = true;
         transform.position = lastRespawnPosition;

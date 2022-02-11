@@ -16,6 +16,13 @@ public class MenuManager : MonoBehaviour
 
     }
 
+    public void LoadSpecialLevel()
+    {
+        //AudioManager.instance.Play("ButtonClick");
+        SceneManager.LoadScene("Nivel_7");
+
+    }
+
     public void LoadSettings()
     {
         //AudioManager.instance.Play("ButtonClick");
