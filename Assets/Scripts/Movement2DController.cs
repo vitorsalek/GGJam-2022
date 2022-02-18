@@ -44,16 +44,6 @@ public class Movement2DController : MonoBehaviour
         {
             moveX = 0;
         }
-        /*
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, ray);
-        if (hit && hit.transform.CompareTag("ground"))
-        {
-            isGrounded = true;
-        }
-        else
-        {
-            isGrounded = false;
-        }*/
     }
 
     private void FixedUpdate()
@@ -92,6 +82,8 @@ public class Movement2DController : MonoBehaviour
     private void OnCollisionExit2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("ground"))
+        {
             isGrounded = false;
+        }
     }
 }
